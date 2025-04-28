@@ -1,0 +1,1 @@
+print("Tu marca de cerveza se llama:\n'" + (input("Ingresa el nombre de la ciudad donde vives: ")) + " " + (input("ingresa el nombre de tu perro: ")) + "'")
