@@ -1,5 +1,5 @@
 import unittest
-import Cambia_texto
+import cambia_texto
 
 class ProbarCambiaTexto(unittest.TestCase):
 
