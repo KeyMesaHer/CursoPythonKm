@@ -30,6 +30,6 @@ for pagina in range(1, 51):
             # agregar libro a la lista
             titulos_rating_alto.append(titulo_libro)
 
-# ver libros 4 u 5 estrellas en consola
+# ver libros 4 o 5 estrellas en consola
 for t in titulos_rating_alto:
     print(t)
