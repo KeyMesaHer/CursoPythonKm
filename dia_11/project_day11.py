@@ -33,4 +33,3 @@ for pagina in range(1, 51):
 # ver libros 4 u 5 estrellas en consola
 for t in titulos_rating_alto:
     print(t)
-gi
