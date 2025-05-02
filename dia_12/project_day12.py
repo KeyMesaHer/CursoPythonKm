@@ -1,5 +1,5 @@
 """
-    Este es un modulo con las funciones y variables de un sistema de facturación de un restaurante
+Este es un modulo con las funciones y variables de un sistema de facturación de un restaurante
 """
 from tkinter import *
 import random
