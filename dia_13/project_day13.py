@@ -1,19 +1,20 @@
 """ 
-Este modulo son las variables y funciones para la operación de un asistente vitual 
+Este script implementa un asistente virtual capaz de interactuar con el usuario mediante reconocimiento de voz. El asistente convierte la voz en texto y responde a diversos comandos, incluyendo: realizar búsquedas en YouTube y Google, consultar información financiera en Yahoo Finance, contar chistes, abrir páginas web y buscar datos en Wikipedia.
 """
-import pyttsx3  # texto a voz
-import speech_recognition as sr #voz a texto
-import pywhatkit  # Automatización de acciones como buscar en YouTube o Google
-import yfinance as yf  # Información financiera en Yahoo Finance
-import pyjokes  # Chistes aleatorios en varios idiomas
-import webbrowser  # Para abrir páginas web
-import datetime  # Manejo de fechas y horas
-import wikipedia  # Búsqueda de información en Wikipedia
+import pyttsx3  
+import speech_recognition as sr
+import pywhatkit  
+import yfinance as yf  
+import pyjokes  
+import webbrowser  
+import datetime  
+import wikipedia  
 
 # Identificadores de voces instaladas 
 id1 = 'HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Speech\\Voices\\Tokens\\TTS_MS_ES-MX_SABINA_11.0'
 id2 = 'HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Speech\\Voices\\Tokens\\TTS_MS_EN-US_ZIRA_11.0'
-id3 = 'HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Speech\\Voices\\Tokens\\TTS_MS_ES-ES_HELENA_11.0'  # Usada por el asistente
+# Usada por el asistente
+id3 = 'HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Speech\\Voices\\Tokens\\TTS_MS_ES-ES_HELENA_11.0'  
 id4 = 'HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Speech\\Voices\\Tokens\\TTS_MS_EN-US_DAVID_11.0'
 
 # Transforma el audio del micrófono en texto
@@ -26,7 +27,7 @@ def trasformar_audio_en_texto():
 
         try:
             pedido = r.recognize_google(audio, language="es-ar")
-            print("Dijiste: " + pedido)
+            print(f'Dijiste {pedido}')
             return pedido
         except sr.UnknownValueError:
             print("ups, no entendi")
@@ -41,7 +42,7 @@ def trasformar_audio_en_texto():
 # Permite que el asistente hable un mensaje en voz alta
 def hablar(mensaje):
     engine = pyttsx3.init()
-    engine.setProperty('voice', id3)  # Voz en español 
+    engine.setProperty('voice', id3)
     engine.say(mensaje)
     engine.runAndWait()
 

@@ -1,10 +1,10 @@
 """ 
-Este modulo son las variables y funciones para la operación de un controlador de asistencia con reconocimiento facial 
+Este script implementa un sistema básico de asistencia de empleados mediante reconocimiento facial. Utiliza la cámara web para capturar imágenes en tiempo real y las compara con una base de datos de fotografías almacenadas para identificar al empleado. Cuando se detecta una coincidencia, se registra la hora de ingreso en un archivo CSV.
 """
-from cv2 import cv2 #Procesamiento de imagenes
-import face_recognition as fr #Detectar y reconocer rostros
+from cv2 import cv2 
+import face_recognition as fr 
 import os
-import numpy #Calculos con arreglos y matrices
+import numpy 
 from datetime import datetime
 
 # crear base de datos
